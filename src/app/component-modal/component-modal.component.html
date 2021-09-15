@@ -1,0 +1,9 @@
+<h3>Cadastro</h3>
+<p>Título: {{ dados.titulo | uppercase}}</p>
+<p>Estrelas: {{ dados.rating | number:'1.1-1'}}</p>
+<p>Preço: {{ dados.preco | currency:'BRL'}}</p>
+<p>Data: {{ dados.data | date:'dd/MMM/yyyy' }}</p>
+<p>JSON: {{ dados | json }}</p>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Fechar</button>
+</div>

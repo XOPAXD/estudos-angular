@@ -1,0 +1,72 @@
+<div class="container">
+  <h3>Cadastro</h3>
+  <form class="example-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input
+        matInput
+        placeholder="Ex. Zé Cocheba"
+        ngModel
+        name="nome"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="Escolha uma Data"
+        ngModel
+        name="data"
+        required
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Comentário</mat-label>
+      <textarea
+        matInput
+        placeholder="Ex. escreva um comentário..."
+        ngModel
+        name="comentario"
+        required
+      ></textarea>
+    </mat-form-field>
+
+    <section>
+      <div class="col-sm-12">
+        <mat-label><b>Tecnologias</b></mat-label>
+      </div>
+
+      <mat-checkbox
+        *ngFor="let item of tecnologias"
+        [(ngModel)]="item.checked"
+        name="tecnologias"
+        value="item.id"
+        class="checkbox"
+        type="checkbox"
+        >{{ item.descricao }}
+      </mat-checkbox>
+    </section>
+
+    <button
+      type="submit"
+      mat-stroked-button
+      color="accent"
+      class="mat-elevation-z8"
+    >
+      SALVAR
+    </button>
+    <button
+      (click)="voltar()"
+      mat-stroked-button
+      color="basic"
+      class="mat-elevation-z8"
+    >
+      VOLTAR
+    </button>
+  </form>
+</div>

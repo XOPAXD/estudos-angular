@@ -1,0 +1,13 @@
+<div class="mb-3">
+  <label for="formFile" class="form-label">Selecione um arquivo</label>
+  <input class="form-control" type="file" id="formFile" (change)="onChange($event)" multiple>
+  
+</div>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" [style.width]="progress +'%'"  aria-valuemin="0" aria-valuemax="100"><span>{{progress}}%</span></div>
+</div>
+<div class="mb-3">
+  <button type="button" class="btn btn-primary" (click)="onUpload()" [disabled]="!files">Enviar</button>
+  <button type="button" class="btn btn-secondary" (click)="onDownloadExcel()" >Baixar excel</button>
+  <button type="button" class="btn btn-info" (click)="onDownloadPDF()" >Baixar PDF</button>
+</div>
