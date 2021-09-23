@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path:'formulario',
     loadChildren:  () => import('./formulario/formulario.module').then(m => m.FormularioModule)
+  },
+  {
+    path:'tecnologias',
+    loadChildren:  () => import('./tecnologias/tecnologias.module').then(m => m.TecnologiasModule)
   }
 ];
 

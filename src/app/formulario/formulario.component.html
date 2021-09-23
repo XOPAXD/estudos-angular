@@ -12,11 +12,23 @@
       />
     </mat-form-field>
 
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        matInput
+        placeholder="Ex. ze@cocheba.com"
+        ngModel
+        name="email"
+        required
+      />
+    </mat-form-field>
+
     <mat-form-field>
       <input
         matInput
         [matDatepicker]="picker"
-        placeholder="Escolha uma Data"
+        placeholder="Data de Início"
         ngModel
         name="data"
         required
