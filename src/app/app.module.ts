@@ -14,11 +14,14 @@ import { ComponentModalComponent } from './component-modal/component-modal.compo
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    ComponentModalComponent
+    ComponentModalComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { ComponentModalComponent } from './component-modal/component-modal.compo
     MatListModule,
     MatIconModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+
 
   ],
   providers: [],

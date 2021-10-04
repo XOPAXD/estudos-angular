@@ -26,6 +26,14 @@ const routes: Routes = [
   {
     path:'tecnologias',
     loadChildren:  () => import('./tecnologias/tecnologias.module').then(m => m.TecnologiasModule)
+  },
+  {
+    path:'quadrinhos',
+    loadChildren:  () => import('./quadrinhos/quadrinhos.module').then(m => m.QuadrinhosModule)
+  },
+  {
+    path:'quadrinhos-novo',
+    loadChildren:  () => import('./quadrinhos-novo/quadrinhos-novo.module').then(m => m.QuadrinhosNovoModule)
   }
 ];
 

@@ -28,11 +28,12 @@ export class TecnologiasComponent implements OnInit {
   tecnologia: Tecnologias = {
     titulo: "",
     descricao: "",
+    data:""
   };
 
   lista: Tecnologias[] = [];
 
-  displayedColumns: string[] = ["titulo", "descricao", "actions"];
+  displayedColumns: string[] = ["titulo", "descricao","data","actions"];
   dataSource = new MatTableDataSource(this.lista);
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
 

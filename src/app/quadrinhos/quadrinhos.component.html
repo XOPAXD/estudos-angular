@@ -1,0 +1,62 @@
+<div class="container">
+  <h3>QUADRINHOS</h3>
+  <mat-divider></mat-divider>
+  <mat-grid-list cols="3" rowHeight="2:3">
+    <mat-grid-tile *ngFor="let item of quadrinhos | paginate: { itemsPerPage: 1, currentPage: p }">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{item.nome}}</mat-card-title>
+          <mat-card-subtitle>{{item.dataPublicacao | date:'dd/MM/yyyy'}}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          alt="{{item.nome}}"
+        />
+        <mat-card-content>
+          <p>
+            {{item.descricao}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div class="row">
+    <div class="col-6">
+      <button
+        type="button"
+        (click)="novo()"
+        mat-stroked-button
+        color="accent"
+        class="mat-elevation-z8"
+      >
+        NOVO
+      </button>
+    </div>
+    <div class="col-6">
+      <button
+        type="button"
+
+        mat-stroked-button
+        color="warn"
+        class="mat-elevation-z8"
+      >
+        EXCLUIR
+      </button>
+    </div>
+  </div>
+  <pagination-controls class="pagination mat-elevation-z8" (pageChange)="p = $event" maxSize="9"
+  directionLinks="true"
+  autoHide="true"
+  responsive="true"
+  previousLabel=""
+  nextLabel=""
+  screenReaderPaginationLabel="Pagination"
+  screenReaderPageLabel="page"
+  screenReaderCurrentLabel="You're on page"></pagination-controls>
+</div>
