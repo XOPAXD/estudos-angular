@@ -1,7 +1,7 @@
 <div class="container">
   <h3>NOVO QUADRINHO</h3>
   <mat-divider></mat-divider>
-  <form class="example-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <form class="example-form" #f="ngForm" (ngSubmit)="onSubmit(f)" enctype="multipart/form-data">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Nome</mat-label>
       <input matInput placeholder="Ex. Superman" ngModel name="nome" required />
