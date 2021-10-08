@@ -54,7 +54,7 @@ export class QuadrinhosNovoComponent implements OnInit {
     this.Quadrinho.nome = form.value.nome;
     this.Quadrinho.descricao = form.value.descricao;
     this.Quadrinho.dataPublicacao = form.value.dataPublicacao;
-    this.Quadrinho.urlImage = "uploads/" + this.currentFile.name;
+    this.Quadrinho.urlImage = "../../assets/" + this.currentFile.name;
 
     this.service.create(this.Quadrinho).subscribe((resposta) => {
       let snack = this._snackBar.open("Salvo com Sucesso!", "OK", {

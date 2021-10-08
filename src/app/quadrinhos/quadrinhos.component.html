@@ -5,13 +5,13 @@
     <mat-grid-tile *ngFor="let item of quadrinhos | paginate: { itemsPerPage: 3, currentPage: p }">
       <mat-card class="example-card">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
+          <div mat-card-avatar class="example-header-image" ><img class="img-rounded" src="{{item.urlImage}}"/></div>
           <mat-card-title>{{item.nome}}</mat-card-title>
           <mat-card-subtitle>{{item.dataPublicacao | date:'dd/MM/yyyy'}}</mat-card-subtitle>
         </mat-card-header>
         <img
           mat-card-image
-          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          src="{{item.urlImage}}"
           alt="{{item.nome}}"
         />
         <mat-card-content>
@@ -20,8 +20,8 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
+          <button mat-button>VER</button>
+          <button mat-button>COMPARTILHAR</button>
         </mat-card-actions>
       </mat-card>
     </mat-grid-tile>
